@@ -1,0 +1,44 @@
+$header-padding: 15px;
+
+.dwp-header {
+    border-bottom: 0;
+    padding-left: $header-padding;
+    padding-right: $header-padding;
+
+    &__link {
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+            color: govuk-colour("white");
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: 3px solid transparent;
+            color: #0b0c0c;
+            background-color: govuk-colour("yellow");
+            box-shadow: 0 -2px govuk-colour("yellow"), 0 4px govuk-colour("black");
+        }
+    }
+
+    &__link-home {
+        font-weight: 700;
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    &__container {
+        padding: $header-padding 0;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+.dwp-main-wrapper {
+    padding: 0;
+}

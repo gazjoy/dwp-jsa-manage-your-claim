@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+    {% include "includes/head.html" %}
+  <!--[if lte IE 8]><link href="/public/stylesheets/agent-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/agent.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header dwp-header">
+    <div class="govuk-grid-row dwp-header__container">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="/" class="dwp-header__link dwp-header__link-home">
+                Manage your new style JSA claim
+            </a>
+        </div>
+        <div class="govuk-grid-column-one-third govuk-right-align-from-tablet">
+            <form role="search" method="post" action="/common/query" class="search-box " aria-label="Search" id="search" title="Search" _lpchecked="1">
+                <div class="search-box__contents">
+                    <div class="search-box__table-cell">
+                        <label for="query" class="govuk-visually-hidden">Enter National Insurance number</label>
+                        <input type="text" name="query" id="query" class="govuk-input search-box__input" placeholder="Find a claim" value="" aria-label="Search" autocomplete="off">
+                    </div>
+                    <div class="search-box__table-cell search-box__table-cell--button">
+                        <button data-uipath="search.button" class="search-box__button" aria-label="Search">
+                            <img src="/public/images/icon-search.png" alt="Magnifying glass">
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% set mainClasses = mainClasses | default("") %}
+
+{% block main %}
+<div class="{{ containerClasses }}">
+    {% block beforeContent %}{% endblock %}
+    <main class="govuk-main-wrapper dwp-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+        {% block content %}{% endblock %}
+    </main>
+</div>
+{% endblock %}
+
+
+{% block footer %}{% endblock %}

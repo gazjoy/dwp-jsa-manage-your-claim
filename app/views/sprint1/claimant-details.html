@@ -1,0 +1,42 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<section class="dwp-key-details-bar dwp-print-hide" role="contentinfo" aria-label="Key details">
+  <dl class="dwp-key-details-bar__contents">
+    <div class="dwp-key-details-bar__header">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-key-details-bar__name"> John Smith</dd>
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-key-details-bar__nino">AA111111A</dd>
+    </div>
+
+    <div class="dwp-key-details-bar__body">
+          <dt>Birth date:</dt>
+          <dd>25/12/1980</dd>
+
+          <dt>Post code:</dt>
+          <dd>SA4W 7SH</dd>
+
+          <dt>Contact:</dt>
+          <dd>0161 1234564</dd>
+
+          <dt>Claim date:</dt>
+          <dd>02/09/2019</dd>
+    </div>
+
+  </dl>
+</section>
+
+
+      <h1 class="govuk-heading-xl">
+        The GOV.UK Prototype Kit
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+
+{% endblock %}
