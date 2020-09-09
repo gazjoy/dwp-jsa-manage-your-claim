@@ -1,0 +1,83 @@
+/*------------------------------------*\
+  Side navigation
+\*------------------------------------*/
+
+// Component styles
+
+.side-nav {
+    @include govuk-font(19);
+    float: left;
+    background: govuk-colour(light-grey);
+    width: 100%;
+    overflow: hidden;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &.open {
+      height: auto;
+    }
+  }
+  
+  .side-nav a {
+    
+    text-decoration: none;
+    color: govuk-colour("blue");
+    &:focus {
+      background: none;
+      outline: none;
+    }
+  }
+  
+  .side-nav__item {
+    a {
+        display: block;
+      overflow: hidden;
+      padding: 15px;
+      position: relative;
+    }
+    @include mq($from: desktop) {
+      display: block;
+      a {
+        padding: 12px 20px 11px 30px;  
+      }
+    }
+    .open & {
+      display: block;
+    }
+    &.active {
+      display: block;
+      a {
+        background: govuk-colour("dark-grey");
+        color: govuk-colour("white");
+        &:after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7px 8px 7px 0;
+          border-color: transparent #ffffff transparent transparent;
+          position: absolute;
+          right: 0; top: 50%;
+          margin-top: -7px;
+        }
+      }
+    }
+    a:hover {
+      background: govuk-colour("blue");
+      color: govuk-colour("white");
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 8px 7px 0;
+        border-color: transparent #ffffff transparent transparent;
+        position: absolute;
+        right: 0; top: 50%;
+        margin-top: -7px;
+      }
+    }
+  }
+  

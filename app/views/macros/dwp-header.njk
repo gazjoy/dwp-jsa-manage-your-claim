@@ -1,0 +1,27 @@
+{% macro dwpHeader() %}
+<header class="govuk-header dwp-header">
+    <div class="govuk-grid-row dwp-header__container">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="/" class="dwp-header__link dwp-header__link-home">
+                Manage your new style JSA claim
+            </a>
+        </div>
+        <div class="govuk-grid-column-one-third govuk-right-align-from-tablet">
+            <form role="search" method="post" action="/common/query" class="search-box " aria-label="Search" id="search" title="Search" _lpchecked="1">
+                <div class="search-box__contents">
+                    <div class="search-box__table-cell">
+                        <label for="query" class="govuk-visually-hidden">Enter National Insurance number</label>
+                        <input type="text" name="query" id="query" class="govuk-input search-box__input" placeholder="Find a claim" value="" aria-label="Search" autocomplete="off">
+                    </div>
+                    {# <div class="search-box__table-cell search-box__table-cell--button">
+                        <button data-uipath="search.button" class="search-box__button" aria-label="Search">
+                            <img src="/public/images/icon-search.png" alt="Magnifying glass">
+                        </button>
+                    </div> #}
+                </div>
+            </form>
+
+        </div>
+    </div>
+</header>
+{% endmacro %}

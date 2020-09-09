@@ -9,3 +9,68 @@ $govuk-assets-path: '/govuk/assets/';
 
 @import "components/dwp-header";
 @import "components/dwp-key-details-bar";
+@import "components/dwp-side-nav";
+
+$large: 1300px;
+
+.dwp-template {
+    background-color: govuk-colour("white");
+}
+
+@include mq($from: desktop) {
+    .dwp-col-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dwp-main-wrapper {
+        flex: 1;
+        height: calc(100vh - 60px);
+        overflow: auto;
+    }
+
+    .dwp-col-left {
+        min-width: 220px;
+        width: 15%;
+        height: calc(100vh - 163px);
+    }
+    .dwp-col-main {
+        flex: 1;
+    }
+
+    .dwp-template {
+        overflow: hidden;
+    }
+
+}
+
+@include mq($from: $large) {
+    .dwp-main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .dwp-col-left {
+        min-width: 300px;
+    }
+    .dwp-col-right {
+        min-width: 260px;
+        width: 15%;
+        height: calc(100vh - 163px);
+    }
+}
+
+.dwp-col-left {
+    background-color: govuk-colour("light-grey");
+}
+
+.dwp-col-right {
+    
+}
+
+.dwp-col-main {
+    padding: 2rem 4rem;
+}
+
+// @include mq($from: desktop) {
+
+// }
