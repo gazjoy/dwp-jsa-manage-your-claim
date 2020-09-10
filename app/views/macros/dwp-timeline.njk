@@ -1,0 +1,39 @@
+{% macro dwpTimeline(params) %}
+{% set headingLevel = params.headingLevel if params.headingLevel else 3 %}
+{% set headingClasses = params.headingClasses if params.headingClasses else "govuk-heading-s" %}
+
+{% if params.items and params.items.length > 0 %}
+  <ol class="dwp-timeline">
+  {% for item in params.items %}
+    {% if item.button == true %}
+      <li class="dwp-timeline__entry has-button {{ item.classes }}">
+        <a href="#" role="button" draggable="false" class="govuk-button js-timeline-expand" data-module="govuk-button">{{ item.buttonText }}</a>
+      </li>
+      {% else %}
+      <li class="dwp-timeline__entry {{ item.classes }}">
+        {% if item.heading %}
+        <h{{ headingLevel }} class="dwp-timeline__title {{ headingClasses }} govuk-!-margin-bottom-0">{{ item.heading }} {% if item.author %}<span class="dwp-timeline__author"> by {{ item.author }}</span> {% endif %}</h{{ headingLevel }}>
+        {% endif %}
+
+        <p class="dwp-timeline__info">
+          {% if item.label %}
+          <span class="govuk-visually-hidden">{{ item.label }}</span>
+          {% endif %}
+          {% if item.date %}
+          <span class="dwp-timeline__date">{{ item.date }}</span>
+          {% endif %}
+        </p>
+        
+        {% if item.body %}
+        <p class="dwp-timeline__body">
+          {{ item.body | safe }}
+        </p>
+        {% endif %}
+
+      </li> 
+      {% endif %}
+    
+  {% endfor %}
+  </ol>
+{% endif %}
+{% endmacro %}

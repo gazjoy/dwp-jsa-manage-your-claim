@@ -1,0 +1,87 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+Change markers - DWP Manage my claim
+{% endblock %}
+
+{% block content %}
+    {{ govukBackLink({
+    text: "Back",
+    href: "javascript: window.history.go(-1)"
+    }) }}
+    <h1 class="govuk-heading-l">Change markers</h1>
+
+    <form method="post" action="markers">
+    {{ govukRadios({
+        idPrefix: "parentMarker",
+        name: "parentMarker",
+        fieldset: {
+            legend: {
+            text: "What is the claimant's parental situation?",
+            classes: "govuk-fieldset__legend--m"
+            }
+        },
+  items: [
+    {
+      value: "No",
+      text: "Not a parent"
+    },
+    {
+      value: "lone",
+      text: "Lone parent",
+      checked: true
+    },
+    {
+      value: "parent",
+      text: "Parent"
+    }
+  ]
+    }) }}
+
+    {{ govukCheckboxes({
+        idPrefix: "otherMarkers",
+      name: "OtherMarkers",
+      fieldset: {
+        legend: {
+          text: "Check claimant's markers",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "Select all that apply"
+      },
+      items: [
+        {
+          value: "Yes",
+          text: "Ex-offender",
+          checked: true
+        },
+        {
+          value: "Yes",
+          text: "Armed forces"
+        },
+        {
+          value: "Yes",
+          text: "Domestic violence"
+        },
+        {
+          value: "Yes",
+          text: "Care leaver"
+        },
+        {
+          value: "Yes",
+          text: "Pension credit"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+        text: "Save claimant details"
+    }) }}
+
+    </form>
+
+{% endblock %}
+

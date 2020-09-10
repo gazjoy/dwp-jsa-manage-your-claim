@@ -49,7 +49,6 @@
     {% block main %}
       <div class="dwp-col-wrapper {{ containerClasses }}">
         <aside class="dwp-col-left">
-          Left column
           {% block beforeContent %}{% endblock %}
         </aside>
         <div class="dwp-main-wrapper">
@@ -57,9 +56,16 @@
             {% block content %}{% endblock %}
           </main>
           <aside class="dwp-col-right">
-            Right column
             {% block afterContent %}{% endblock %}
           </aside>
+
+          {{ govukPhaseBanner({
+            tag: {
+              text: "beta"
+            },
+            html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.',
+            classes: 'govuk-!-margin-top-9 govuk-!-margin-bottom-9'
+          }) }}
         </div>
       </div>
     {% endblock %}

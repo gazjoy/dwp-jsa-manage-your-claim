@@ -151,3 +151,10 @@ $header-padding: 15px;
     }
   }
 }
+
+$large: 1300px;
+@include mq($from: $large) {
+    .dwp-key-details-bar__contents {
+        display: flex;
+    }
+}

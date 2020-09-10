@@ -7,110 +7,504 @@
 
 {% block content %}
 
+    <h1 class="govuk-heading-l">Claimant details</h1>
+
+    {{ govukWarningText({
+        text: "Claimant has applied for Universal Credit"
+    }) }}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">Markers</h2>
+        </div>
+        <div class="govuk-grid-column-one-third dwp-align-right">
+            <a href="markers" class="govuk-body" aria-label="Change markers">Change</a>
+        </div>
+    </div>
+      
+
+        {{ govukSummaryList({
+        rows: [
+            {
+                key: {
+                    text: "Parental"
+                },
+                value: {
+                    text: "Lone parent"
+                }
+            },
+            {
+                key: {
+                    text: "Ex-offender"
+                },
+                value: {
+                    text: "Yes"
+                }
+            }
+        ]
+        }) }}
 
 
-      <h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}<h1 class="govuk-heading-l">
-        Claimant details
-        <span class="govuk-caption-l">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+            {% set personalDetailsSummaryList %}
+              {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Marital status"
+                        },
+                        value: {
+                            text: "Married or Civil Partnership"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "name"
+                            }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Correspondence address"
+                        },
+                        value: {
+                            text: "1, Poundlove Road, Sandwell, West Midlands. WS11 5DF. England."
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "date of birth"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Phone number"
+                        },
+                        value: {
+                            text: "07756 789789"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "date of birth"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Email"
+                        },
+                        value: {
+                            text: "testemail@gmail.com"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "date of birth"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Known as"
+                        },
+                        value: {
+                            text: "Jay"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "date of birth"
+                                }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="#">Add more personal details</a></p>
+            {% endset %}
+
+            {% set recentEducationSummaryList %}
+              {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Course or training programme"
+                        },
+                        value: {
+                            text: "City & Guilds Photography"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "course or training"
+                            }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Institution"
+                        },
+                        value: {
+                            text: "Walsall College"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "institution"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Hours per week"
+                        },
+                        value: {
+                            text: "18"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "hours per week"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Dates attended"
+                        },
+                        value: {
+                            text: "09 June 2016 – 12 December 2016"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "dates attended"
+                                }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="#">Add another recent education or training</a></p>
+            {% endset %}
+
+            {% set lastEmployerSummaryList %}
+              {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Employed"
+                        },
+                        value: {
+                            text: "Yes"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "employed"
+                            }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Current employer"
+                        },
+                        value: {
+                            text: "Tesco"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "current employer"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Paid"
+                        },
+                        value: {
+                            text: "Monthly"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "paid"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Net pay"
+                        },
+                        value: {
+                            text: "£230"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "net pay"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Phone"
+                        },
+                        value: {
+                            text: "0247 999 9999"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "phone"
+                                }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="#">Add another last or current employer</a></p>
+            {% endset %}
+
+
+         {% set currentPensionsSummaryList %}
+              {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Provider"
+                        },
+                        value: {
+                            text: "Tesco"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "provider"
+                            }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Started"
+                        },
+                        value: {
+                            text: "September 2017"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "started"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Paid"
+                        },
+                        value: {
+                            text: "Monthly"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "paid"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Net pension"
+                        },
+                        value: {
+                            text: "£120"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "net pension"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Due to increase"
+                        },
+                        value: {
+                            text: "December 2020"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "due to increase"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        key: {
+                            text: "Another pension due in the next 6 months"
+                        },
+                        value: {
+                            text: "No"
+                        },
+                        actions: {
+                            items: [
+                                {
+                                    href: "#",
+                                    text: "Change",
+                                    visuallyHiddenText: "another pension due"
+                                }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="#">Add another current pension</a></p>
+            {% endset %}
+
+
+        {{ govukAccordion({
+            id: "accordion-default",
+            items: [
+                {
+                    heading: {
+                        text: "Personal details"
+                    },
+                    content: {
+                        html: personalDetailsSummaryList
+                    },
+                    expanded: true
+                },
+                {
+                    heading: {
+                        text: "Recent education or training"
+                    },
+                    content: {
+                        html: recentEducationSummaryList
+                    }
+                },
+                {
+                    heading: {
+                        text: "Last or current employer"
+                    },
+                    content: {
+                        html: lastEmployerSummaryList
+                    }
+                },
+                {
+                    heading: {
+                        text: "Current pensions"
+                    },
+                    content: {
+                        html: currentPensionsSummaryList
+                    }
+                }
+            ]})
+        }}
+
+
+{% endblock %}
+
+
+{% block afterContent %}
+<h2 class="govuk-heading-m">Changes of circumstances</h2>
+{{ dwpTimeline({
+    items: [{
+        "heading": "Personal details updated",
+        "author": "Terry Archer",
+        "date": "1 September 2020 at 13:02 (1 week ago)",
+        "body": "Added known as Jay"
+    }, {
+        "heading": "Current pensions updated",
+        "author": "Terry Archer",
+        "date": "1 September 2020 at 12:30pm (1 week ago)",
+        "body": "Changed Net pension from £115 to £120"
+    }, {
+        "heading": "Recent education or training added",
+        "author": "Terry Archer",
+        "date": "1 September 2020 at 12:27pm (1 week ago)",
+        "body": "Added City & Guilds Photography at Walsall College"
+    }, {
+        "heading": "Markers added",
+        "author": "Terry Archer",
+        "date": "1 September 2020 at 12:25pm (1 week ago)",
+        "body": "Added lone parent and ex-offender markers"
+    }, {
+        "heading": "Recent education or training updated",
+        "author": "Terry Archer",
+        "date": "21 August 2020 at 11:22am (3 weeks ago)",
+        "body": "Added City & Guilds Photography at Walsall College"
+    } ,{
+        "heading": "Claim submitted",
+        "date": "15 August 2020 (4 weeks ago)"
+    }]
+}) }}
+
+<aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m">Related pages on GOV.UK</h2>
+    <nav role="navigation" aria-labelledby="claim-actions-title">
+        <ul class="govuk-list">
+            <li><a href="#">Find a job</a></li>
+            <li><a href="#">Jobseekers allowance (JSA)</a></li>
+            <li><a href="#">Universal Credit</a></li>
+            <li><a href="#">Employment and support allowance (ESA)</a></li>
+        </ul>
+    </nav>
+</aside>
 {% endblock %}

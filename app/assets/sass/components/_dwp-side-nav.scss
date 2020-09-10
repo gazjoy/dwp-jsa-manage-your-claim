@@ -6,10 +6,6 @@
 
 .side-nav {
     @include govuk-font(19);
-    float: left;
-    background: govuk-colour(light-grey);
-    width: 100%;
-    overflow: hidden;
     ul {
       list-style: none;
       margin: 0;
@@ -21,12 +17,12 @@
   }
   
   .side-nav a {
-    
     text-decoration: none;
     color: govuk-colour("blue");
-    &:focus {
-      background: none;
-      outline: none;
+
+    &:focus,
+    &.active a:focus {
+        background-color: govuk-colour("yellow");
     }
   }
   
@@ -51,6 +47,11 @@
       a {
         background: govuk-colour("dark-grey");
         color: govuk-colour("white");
+
+        &:focus {
+            background-color: govuk-colour("yellow");
+            color: govuk-colour("black");
+        }
         &:after {
           content: '';
           width: 0;
