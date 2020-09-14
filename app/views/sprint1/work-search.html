@@ -53,7 +53,7 @@
 
 
     <form action="work-search" method="post" class="dwp-hide js-meeting-form">
-        <h2 class="govuk-heading-l">Adding a meeting</h2>
+        <h2 class="govuk-heading-l">Record an appointment</h2>
         {{ govukRadios({
             idPrefix: "typeMeeting",
             name: "typeMeeting",
@@ -90,8 +90,8 @@
             },
             items: [
                 {
-                value: "audio",
-                text: "Audio call"
+                value: "phone",
+                text: "Phone call"
                 },
                 {
                 value: "video",

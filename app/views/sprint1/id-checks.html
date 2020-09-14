@@ -1,0 +1,223 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+  Claimant work search
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="govuk-heading-l">Claimant identity checks</h1>
+    {{ dwpTimeline({
+        headingLevel: 2,
+        headingClasses: "govuk-heading-m",
+        items: [{
+            "button": true,
+            "buttonText": "Record an identity check",
+            "classes": "js-meeting-wrapper"
+        }, {
+            "heading": "Primary ID checked",
+            "author": "Terry Archer",
+            "date": "8 September 2020 (today)",
+            "body": "
+                Checked claimant's passport – last 4 digits (1894)
+                "
+        }, {
+            "heading": "Primary and secondary ID checked",
+            "author": "Fiona Robinson",
+            "date": "1 September 2020 (1 week ago)",
+            "body": "
+                Checked claimant's passport – last 4 digits (1894)<br>
+                Checked claimant's utility bill<br>
+                Checked claimant's bank statement
+                "
+        }, {
+            "heading": "Primary and secondary ID checked",
+            "author": "Terry Archer",
+            "date": "21 August 2020 (3 weeks ago)",
+            "body": "
+                Checked claimant's passport – last 4 digits (1894)<br>
+                Checked claimant's utility bill<br>
+                Checked claimant's bank statement
+                "
+        }, {
+            "heading": "Claim submitted",
+            "date": "15 August 2020 (4 weeks ago)"
+        }]
+    }) }}
+
+    <!-- radio 1: primamry ID reavel -->
+    {% set primaryHtml %}
+      {{ govukInput({
+        id: "primary-id",
+        name: "primary-id",
+        type: "text",
+        label: {
+          text: "Give details"
+        }
+      }) }}
+    {% endset -%}
+
+    {% set passportHtml %}
+      {{ govukInput({
+        id: "passport-id",
+        name: "passport-id",
+        type: "text",
+        label: {
+          text: "Last four digits of passport number"
+        },
+        classes: "govuk-!-width-one-quarter"
+      }) }}
+    {% endset -%}
+
+    <!-- Radio 2: secondary ID reveal -->
+    {% set secondaryHtml %}
+      {{ govukInput({
+        id: "secondary-id",
+        name: "secondary-id",
+        type: "text",
+        label: {
+          text: "Give details"
+        }
+      }) }}
+
+    {% endset -%}
+
+    {% set textHtml %}
+    {{ govukTextarea({
+        name: "more-detail",
+        id: "more-detail",
+        label: {
+          text: "Give details"
+        }
+    }) }}
+
+    
+    {% endset -%}
+
+    <form action="id-checks" method="post" class="dwp-hide js-meeting-form">
+        <h2 class="govuk-heading-l">Record an identity check</h2>
+        {{ govukCheckboxes({
+            idPrefix: "citizenship-conditional",
+            name: "citizen",
+            fieldset: {
+                legend: {
+                text: "Check claimant's primary identity document",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            hint: {
+                text: "Select at least one option"
+            },
+            items: [
+                {
+                value: "passport",
+                text: "Passport",
+                conditional: {
+                    html: passportHtml
+                }
+                },
+                {
+                value: "Driving licence",
+                text: "Driving licence",
+                conditional: {
+                    html: secondaryHtml
+                }
+                },
+                {
+                value: "biomteric",
+                text: "Biometric residence permit",
+                conditional: {
+                    html: primaryHtml
+                }
+                },
+                {
+                value: "text message",
+                text: "Other primary ID documents",
+                conditional: {
+                    html: textHtml
+                }
+                }
+            ]
+        }) }}
+
+        {{ govukCheckboxes({
+            name: "checkid2",
+            fieldset: {
+                legend: {
+                text: "Check claimant's secondary identity documents",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            hint: {
+                text: "Select at least two options"
+            },
+            items: [
+                {
+                value: "Birth certificate",
+                text: "Birth certificate",
+                conditional: {
+                    html: primaryHtml
+                }
+                },
+                {
+                value: "Marriage certificate",
+                text: "Marriage certificate",
+                conditional: {
+                    html: secondaryHtml
+                }
+                },
+                {
+                value: "Utility bill",
+                text: "Utility bill",
+                conditional: {
+                    html: primaryHtml
+                }
+                },
+                {
+                value: "Bank statement",
+                text: "Bank statement",
+                conditional: {
+                    html: primaryHtml
+                }
+                },
+                {
+                value: "text message",
+                text: "Any other documents",
+                conditional: {
+                    html: textHtml
+                }
+                }
+            ]
+        }) }}
+            
+        <div class="dwp-flex dwp-flex-middle">
+            {{ govukButton({
+                text: "Record an identity check",
+                classes: "govuk-!-margin-right-5"
+            }) }}
+            <a href="#" class="js-meeting-cancel">Cancel</a>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    </form>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+<aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m">Related pages on GOV.UK</h2>
+    <nav role="navigation" aria-labelledby="claim-actions-title">
+        <ul class="govuk-list">
+            <li><a href="#">Find a job</a></li>
+            <li><a href="#">Jobseekers allowance (JSA)</a></li>
+            <li><a href="#">Universal Credit</a></li>
+            <li><a href="#">Employment and support allowance (ESA)</a></li>
+        </ul>
+    </nav>
+</aside>
+{% endblock %}
