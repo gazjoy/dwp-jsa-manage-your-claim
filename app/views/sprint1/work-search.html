@@ -5,6 +5,8 @@
   Claimant work search
 {% endblock %}
 
+{% set activeNav = "work-search" %}
+
 {% block content %}
 
     <h1 class="govuk-heading-l">Claimant work search</h1>
@@ -13,7 +15,7 @@
         headingClasses: "govuk-heading-m",
         items: [{
             "button": true,
-            "buttonText": "Add a meeting",
+            "buttonText": "Record an appointment",
             "classes": "js-meeting-wrapper"
         }, {
             "heading": "Work search review (video call)",
@@ -108,7 +110,7 @@
             name: "meetingNotes",
             id: "meetingNotes",
             label: {
-                text: "Meeting notes and actions",
+                text: "Notes and actions",
                 classes: "govuk-label--m"
             },
             hint: {
@@ -118,7 +120,7 @@
 
         <div class="dwp-flex dwp-flex-middle">
             {{ govukButton({
-                text: "Add meeting",
+                text: "Save appointment",
                 classes: "govuk-!-margin-right-5"
             }) }}
             <a href="#" class="js-meeting-cancel">Cancel</a>

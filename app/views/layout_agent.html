@@ -32,6 +32,7 @@
 {% from "macros/dwp-header.njk"                       import dwpHeader %}
 {% from "macros/dwp-key-details-bar.njk"              import dwpKeyDetailsBar %}
 {% from "macros/dwp-timeline.njk"                     import dwpTimeline %}
+{# {% from "macros/dwp-side-nav.njk"                     import dwpSideNav %} #}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -56,17 +57,18 @@
 {% endblock %}
 
 {% block beforeContent %}
-<nav class="side-nav">
+  <nav class="side-nav">
     <ul>
-      <li class="side-nav__item">
+      <li class="side-nav__item {% if activeNav == 'claimant-details' %}active{% endif %}">
         <a href="claimant-details">Manage claimant details</a>
       </li>
-      <li class="side-nav__item">
+      <li class="side-nav__item {% if activeNav == 'work-search' %}active{% endif %}">
         <a href="work-search">Manage claimant work search</a>
       </li>
-      <li class="side-nav__item">
+      <li class="side-nav__item {% if activeNav == 'id-checks' %}active{% endif %}">
         <a href="id-checks">Manage claimant identity checks</a>
       </li> 
+
     </ul>
   </nav>
 {% endblock %}

@@ -17,7 +17,7 @@
   }
   
   .side-nav a {
-    text-decoration: none;
+    
     color: govuk-colour("blue");
 
     &:focus,
@@ -29,9 +29,14 @@
   .side-nav__item {
     a {
         display: block;
-      overflow: hidden;
-      padding: 15px;
-      position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        padding: 15px;
+        position: relative;
+        border-left: 4px solid transparent;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     @include mq($from: desktop) {
       display: block;
@@ -45,8 +50,8 @@
     &.active {
       display: block;
       a {
-        background: govuk-colour("dark-grey");
-        color: govuk-colour("white");
+        border-left-color: govuk-colour("blue");
+        font-weight: bold;
 
         &:focus {
             background-color: govuk-colour("yellow");
@@ -66,8 +71,8 @@
       }
     }
     a:hover {
-      background: govuk-colour("blue");
-      color: govuk-colour("white");
+      // background: govuk-colour("blue");
+      // color: govuk-colour("white");
       &:after {
         content: '';
         width: 0;
