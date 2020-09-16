@@ -1,16 +1,24 @@
 // global styles for <a> and <p> tags
 $govuk-global-styles: true;
 
+// Override the default GOV.UK Frontend font stack
+// $govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
+
+// Import custom components and things from
+// https://dwp-design-examples.herokuapp.com
 @import "components/dwp-header";
+@import "components/dwp-search";
 @import "components/dwp-key-details-bar";
 @import "components/dwp-side-nav";
 @import "components/dwp-timeline";
+
 
 $large: 1220px;
 
@@ -81,8 +89,13 @@ $large: 1220px;
 }
 
 .dwp-main-wrapper {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include mq($from: desktop) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 

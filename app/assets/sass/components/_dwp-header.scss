@@ -7,6 +7,7 @@ $header-padding: 15px;
 
     &__link {
         text-decoration: none;
+        margin-bottom: 5px;
 
         &:link,
         &:visited {
@@ -33,7 +34,12 @@ $header-padding: 15px;
     &__container {
         padding: 5px 0;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+
+        @include govuk-media-query($from: tablet) {
+            justify-content: space-between;
+        }
     }
 
 }

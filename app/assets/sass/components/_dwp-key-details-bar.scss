@@ -7,9 +7,7 @@ $header-padding: 15px;
     padding-left: $header-padding;
     padding-right: $header-padding;
     background-color: govuk-colour("blue");
-    font-family: "GDS Transport", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @include govuk-font(16);
 
     .dwp-key-details-bar__contents {
         margin: 0;

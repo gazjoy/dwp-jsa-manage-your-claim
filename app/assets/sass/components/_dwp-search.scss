@@ -1,0 +1,22 @@
+.dwp-search {
+    display: flex;
+    justify-content: flex-end;
+
+    &__query {
+        flex-grow: 1;
+    }
+
+    &__input {
+        min-width: 12rem;
+        padding-left: 35px;
+        background-image: url('/public/images/magnifying-glass.svg');
+        background-repeat: no-repeat;
+        background-position: center left -2px;
+        background-size: 40px 40px;
+    }
+
+    &__button {
+        margin-bottom: 0;
+        margin-left: 5px;
+    }
+}
