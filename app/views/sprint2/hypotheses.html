@@ -1,0 +1,89 @@
+{% set sprint2Summary %}
+<h3 class='govuk-heading-s'>Hypothesis #1 – Claimant commitment appointment booking</h3>
+{{ govukSummaryList({
+  rows: [
+      {
+          key: {
+              text: "We believe that"
+          },
+          value: {
+              text: "by providing an initial appointment to gain an in depth knowledge of the jobseeker and identify initial steps needed to help them back into work"
+          }
+      },
+      {
+          key: {
+              text: "For"
+          },
+          value: {
+              text: "work coaches & jobseekers"
+          }
+      },
+      {
+          key: {
+              text: "will acheive"
+          },
+          value: {
+              html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>being prepared for the interview</li>
+                  <li>agree initial steps to help jobseekers back into work</li>
+                  <li>understanding of the support needed for future interviews</li>
+                </ul>
+              "
+          }
+      },
+      {
+          key: {
+              text: "validated by"
+          },
+          value: {
+              text: "interviews and gaining feedback on prototypes"
+          }
+      }
+  ]
+  }) }}
+
+  <h3 class='govuk-heading-s'>Hypothesis #2 – Review appointment booking</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "by providing a flexible way of booking and conducting tailored review appointments"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "work coaches & jobseekers"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "better quality appointments to support the jobseeker to get back into work"
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "interviews and gaining feedback on prototypes"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+
+{{ govukDetails({
+    summaryText: "View team design hypotheses",
+    html: sprint2Summary
+}) }}

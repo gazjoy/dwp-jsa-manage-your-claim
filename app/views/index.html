@@ -18,26 +18,31 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
         {{ serviceName }}
-        <span class="govuk-caption-m">GOV.UK Prototype Kit {{releaseVersion}}</span>
+        <span class="govuk-caption-m">September – October 2020</span>
       </h1>{{releaseVersion | log }}
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">
+        Sprint #2 – Appointment booking
+        <span class="govuk-caption-m">September 17 to 30</span>
+      </h2>
+      {% include 'sprint2/hypotheses.html' %}
+      <p><a href='sprint2'>View prototype</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
       <h2 class="govuk-heading-m">
         Sprint #1 – Claimant profile
-        <span class="govuk-caption-m">September 3 to 17 2020</span>
+        <span class="govuk-caption-m">September 3 to 16</span>
       </h2>
-      <h3 class="govuk-heading-s">Hypothesis</h3>
-      <p>We believe that: [providing a claimant profile created from the NSJSA application] for: [work coaches], will acheive:</p>
-      <ul  class="govuk-list govuk-list--bullet">
-        <li>[a reduction in re-keying information and provide users with all the information they need in one place</li>
-        <li>the ability to capture conversations about the claim]</li>
-      </ul>
-      <p>validated by: [gaining feedback on prototypes]</p>
+      {% include 'sprint1/hypotheses.html' %}
+      <p><a href='sprint1'>View prototype</a></p>
 
-      <p><a href="sprint1">View prototype</a></p>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     </div>

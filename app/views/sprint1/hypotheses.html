@@ -1,0 +1,51 @@
+
+{% set sprint1Summary %}
+
+    <h3 class='govuk-heading-s'>Hypothesis – Claimant profile</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "providing a claimant profile created from the NSJSA application"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "work coaches & jobseekers"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                html: "
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>a reduction in re-keying information and provide users with all the information they need in one place</li>
+                  <li>the ability to capture conversations about the claim</li>
+                </ul>
+                "
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "interviews and gaining feedback on prototypes"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+{{ govukDetails({
+    summaryText: "View team design hypotheses",
+    html: sprint1Summary
+}) }}
