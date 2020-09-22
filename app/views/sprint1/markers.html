@@ -1,5 +1,5 @@
 
-{% extends "layout_agent.html" %}
+{% extends "layout_claimant.html" %}
 
 {% block pageTitle %}
 Change markers - DWP Manage my claim
@@ -8,10 +8,7 @@ Change markers - DWP Manage my claim
 {% set activeNav = "claimant-details" %}
 
 {% block content %}
-    {{ govukBackLink({
-    text: "Back",
-    href: "javascript: window.history.go(-1)"
-    }) }}
+    {% include "includes/back.html" %}
     <h1 class="govuk-heading-l">Change markers</h1>
 
     <form method="post" action="markers">

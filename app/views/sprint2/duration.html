@@ -1,0 +1,82 @@
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+Duration | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "book-appointment" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+    <form action="duration" method="post">
+    {{ govukRadios({
+        idPrefix: "duration",
+        name: "duration",
+        fieldset: {
+            legend: {
+            html:
+            "   <h1 class=govuk-fieldset__heading>
+                    <span class=govuk-caption-m>Booking an appointment for John Smith</span>
+                    How long does this appointment need to be?
+                </h1>
+            ",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+            value: "10",
+            text: "10 minutes",
+                hint: {
+                    text: "Adviseable for jobseekers who don't need much support."
+                }
+            },
+            {
+            value: "15",
+            text: "15 minutes"
+            },
+            {
+            value: "20",
+            text: "20 minutes"
+            },
+            {
+                value: "25",
+                text: "25 minutes"
+            },
+            {
+            value: "30",
+            text: "30 minutes"
+            },
+            {
+            value: "45",
+            text: "45 minutes",
+                hint: {
+                    text: "Adviseable for digital focus appointments."
+                }
+            },
+            {
+            value: "hour",
+            text: "1 hour",
+                hint: {
+                    text: "Adviseable for new claim appointments."
+                }
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Continue"
+    }) }}
+    </form>
+
+{% endblock %}
+
+
+{% block afterContent %}
+{% endblock %}

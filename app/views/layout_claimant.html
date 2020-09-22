@@ -57,16 +57,14 @@
 {% endblock %}
 
 {% block afterHeader %}
+  {{ dwpKeyDetailsBar({}) }}
 {% endblock %}
 
 {% block beforeContent %}
-  {% include "includes/dwp-diary-nav.html" %}
+  {% include "includes/dwp-claimant-nav.html" %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("") %}
-
-{% block afterContent %}
-{% endblock %}
 
 {% if useAutoStoreData %}
   {% block footer %}

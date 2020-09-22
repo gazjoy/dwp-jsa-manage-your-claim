@@ -2,10 +2,14 @@
 {% extends "layout_claimant.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+Claimant details | {{ serviceName }}
 {% endblock %}
 
 {% set activeNav = "claimant-details" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
 
 {% block content %}
 

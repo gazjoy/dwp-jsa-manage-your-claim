@@ -1,0 +1,115 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+Diary | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "this-week" %}
+
+{% block content %}
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Your diary this week</span>
+        21 – 26 September 2020
+    </h1>
+
+    {% set mondayHtml %}
+    <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">Monday</caption>
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Time</th>
+                <th scope="col" class="govuk-table__header">Appointment</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">9:00</th>
+                <td class="govuk-table__cell">
+                    <p>Staff meeting</p>
+                    <p>Uses walking aids</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">10:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s"><a href="claimant-details">Marvin Gordon</a></h3>
+                    <p>Uses walking aids</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">11:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s"><a href="claimant-details">James Smith Amber</a></h3>
+                    <p>JSA Light touch</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">12:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s"><a href="claimant-details">John Smith</a></h3>
+                    <p>Uses walking aids</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">13:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s">George Lemming</h3>
+                    <p>Universal Credit</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">14:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s">Sarah Ormond</h3>
+                    <p>Universal Credit</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">15:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s">Terrence Jeffries</h3>
+                    <p>Universal Credit</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {% endset %}
+
+    {{ govukTabs({
+        items: [
+            {
+                label: "Monday (today)",
+                id: "monday",
+                panel: {
+                    html: mondayHtml
+                }
+            }, {
+                label: "Tuesday",
+                id: "tuesday",
+                panel: {
+                    html: "Tuesday" + mondayHtml
+                }
+            }, {
+                label: "Wednesday",
+                id: "wednesday",
+                panel: {
+                    html: "Wednesday" + mondayHtml
+                }
+            }, {
+                label: "Thursday",
+                id: "thursday",
+                panel: {
+                    html: "Thursday" + mondayHtml
+                }
+            }, 
+            {
+                label: "Friday",
+                id: "friday",
+                panel: {
+                    html: "Friday" + mondayHtml
+                }
+            }
+        ]
+    }) }}
+{% endblock %}

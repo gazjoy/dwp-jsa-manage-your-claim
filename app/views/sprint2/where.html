@@ -1,0 +1,58 @@
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+Where | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "book-appointment" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+    <form action="type" method="post">
+    {{ govukRadios({
+        idPrefix: "where",
+        name: "where",
+        fieldset: {
+            legend: {
+            html:
+            "   <h1 class=govuk-fieldset__heading>
+                    <span class=govuk-caption-m>Booking an appointment for John Smith</span>
+                    Where will the appointment be?
+                </h1>
+            ",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+            value: "telephone",
+            text: "Over the telephone"
+            },
+            {
+            value: "jcp",
+            text: "In my job centre"
+            },
+            {
+            value: "home",
+            text: "At the claimants home"
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Continue"
+    }) }}
+    </form>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

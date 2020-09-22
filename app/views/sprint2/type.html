@@ -1,0 +1,72 @@
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+Type | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "book-appointment" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+    <form action="type" method="post">
+    {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+            legend: {
+            html:
+            "   <h1 class=govuk-fieldset__heading>
+                    <span class=govuk-caption-m>Booking an appointment for John Smith</span>
+                    What type of appointment do you want to book?
+                </h1>
+            ",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+            value: "new",
+            text: "New claim"
+            },
+            {
+            value: "review",
+            text: "Work search review"
+            },
+            {
+            value: "reclaim",
+            text: "Reclaim"
+            },
+            {
+                value: "adhoc",
+                text: "Unplanned",
+                hint: {
+                    text: "an appointment that didn't have a booking."
+                }
+            },
+            {
+            value: "digital",
+            text: "Digital focus",
+                hint: {
+                    text: "using the job centre equipment."
+                }
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Continue"
+    }) }}
+    </form>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

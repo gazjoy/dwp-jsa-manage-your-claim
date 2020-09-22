@@ -1,14 +1,14 @@
 .dwp-timeline {
-    border-left: 4px solid govuk-colour('blue');
     list-style: none;
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
     max-width: 75ch;
   }
   
   .dwp-timeline__entry {
-    margin: 2em 0;
-    padding-left: 1em;
+    border-left: 4px solid govuk-colour('blue');
+    margin: 0;
+    padding: 0 0 1em 1em;
     position: relative;
 
     &.has-button {
@@ -62,4 +62,8 @@
 
   .dwp-timeline__author {
       white-space: nowrap;
+  }
+
+  .dwp-timeline__entry--dash {
+    border-left-style: dashed;
   }

@@ -1,3 +1,5 @@
+{% from "govuk/components/button/macro.njk"           import govukButton %}
+
 {% macro dwpTimeline(params) %}
 {% set headingLevel = params.headingLevel if params.headingLevel else 3 %}
 {% set headingClasses = params.headingClasses if params.headingClasses else "govuk-heading-s" %}
@@ -12,7 +14,7 @@
       {% else %}
       <li class="dwp-timeline__entry {{ item.classes }}">
         {% if item.heading %}
-        <h{{ headingLevel }} class="dwp-timeline__title {{ headingClasses }} govuk-!-margin-bottom-0">{{ item.heading }} {% if item.author %}<span class="dwp-timeline__author"> by {{ item.author }}</span> {% endif %}</h{{ headingLevel }}>
+        <h{{ headingLevel }} class="dwp-timeline__title {{ headingClasses }} govuk-!-margin-bottom-0">{{ item.heading }} {% if item.author %}<span class="dwp-timeline__author">{{ item.author }}</span> {% endif %}</h{{ headingLevel }}>
         {% endif %}
 
         <p class="dwp-timeline__info">
@@ -25,9 +27,20 @@
         </p>
         
         {% if item.body %}
-        <p class="dwp-timeline__body">
+        <div class="dwp-timeline__body">
           {{ item.body | safe }}
-        </p>
+        </div>
+        {% endif %}
+
+        {% if item.cancelButton %}
+        <p><a href="cancel">{{ item.buttonText }}</a></p>
+        {% endif %}
+
+        {% if item.notesButton %}
+        {{ govukButton({
+            text: "Add appointment notes",
+            classes: "js-timeline-expand"
+        }) }}
         {% endif %}
 
       </li> 
