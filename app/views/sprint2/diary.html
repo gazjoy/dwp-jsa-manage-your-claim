@@ -27,49 +27,85 @@ Diary | {{ serviceName }}
                 <th scope="row" class="govuk-table__header">9:00</th>
                 <td class="govuk-table__cell">
                     <p>Staff meeting</p>
-                    <p>Uses walking aids</p>
                 </td>
             </tr>
             <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">10:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s"><a href="claimant-details">Marvin Gordon</a></h3>
-                    <p>Uses walking aids</p>
+                    <h3 class="govuk-heading-s"><a href="work-search">Marvin Gordon</a></h3>
+                    {{ govukSummaryList({
+                    rows: [
+                        {
+                            key: {
+                                text: "Type"
+                            },
+                            value: {
+                                text: "Work search review"
+                            }
+                        }, {
+                            key: {
+                                text: "Where"
+                            },
+                            value: {
+                                text: "Phone"
+                            }
+                        }, {
+                            key: {
+                                text: "Duration"
+                            },
+                            value: {
+                                text: "10 minutes"
+                            }
+                        }, {
+                            key: {
+                                text: "Markers"
+                            },
+                            value: {
+                                text: "Uses walking aids"
+                            }
+                        }
+                    ]
+                    }) }}
                 </td>
             </tr>
             <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">11:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s"><a href="claimant-details">James Smith Amber</a></h3>
-                    <p>JSA Light touch</p>
+                    <h3 class="govuk-heading-s"><a href="work-search">James Smith Amber</a></h3>
                 </td>
             </tr>
             <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">12:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s"><a href="claimant-details">John Smith</a></h3>
+                    <h3 class="govuk-heading-s"><a href="work-search">John Smith</a></h3>
                     <p>Uses walking aids</p>
                 </td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row dwp-table-row">
                 <th scope="row" class="govuk-table__header">13:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s">George Lemming</h3>
-                    <p>Universal Credit</p>
+                    <h3 class="govuk-heading-s">Lunch</h3>
                 </td>
             </tr>
             <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">14:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s">Sarah Ormond</h3>
-                    <p>Universal Credit</p>
+                    <h3 class="govuk-heading-s"><a href="work-search">John Smith</a></h3>
+                    <p>Uses walking aids</p>
                 </td>
             </tr>
             <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">15:00</th>
                 <td class="govuk-table__cell">
-                    <h3 class="govuk-heading-s">Terrence Jeffries</h3>
-                    <p>Universal Credit</p>
+                    <h3 class="govuk-heading-s"><a href="work-search">John Smith</a></h3>
+                    <p>Uses walking aids</p>
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">16:00</th>
+                <td class="govuk-table__cell">
+                    <h3 class="govuk-heading-s"><a href="work-search">John Smith</a></h3>
+                    <p>Uses walking aids</p>
                 </td>
             </tr>
         </tbody>

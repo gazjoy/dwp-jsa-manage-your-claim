@@ -13,13 +13,19 @@ Booking complete | {{ serviceName }}
 
 {% block content %}
 
-    <h1 class="govuk-heading-l">Complete</h1>
+    {{ govukPanel({
+        titleText: "Booking complete"
+    }) }}
+
+    <p>You have been sent a confirmation of this booking by email.</p>
+
+    <p>A confirmation of this booking has also been sent to email@gmail.com</p>
+
 
 
 {% endblock %}
 
 
 {% block afterContent %}
-<h2 class="govuk-heading-m">Chs</h2>
 
 {% endblock %}
