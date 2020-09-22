@@ -17,4 +17,16 @@ router.post('/duration', function (req, res) {
   res.redirect('where');
 })
 
+router.post('/where', function (req, res) {
+  res.redirect('who');
+})
+
+router.post('/who', function (req, res) {
+  res.redirect('when');
+})
+
+router.post('/when', function (req, res) {
+  res.redirect('check');
+})
+
 module.exports = router

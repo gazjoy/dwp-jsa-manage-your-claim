@@ -1,0 +1,101 @@
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+Who | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "book-appointment" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+    <form action="who" method="post">
+
+{% set otherHtml %}
+{{ govukSelect({
+  id: "select",
+  name: "select",
+  label: {
+    text: "Select someone from your team"
+  },
+  items: [
+    {
+      value: "fiona",
+      text: "Fiona Robinson"
+    },
+    {
+      value: "brian",
+      text: "Brian Bradley",
+      selected: true
+    },
+    {
+      value: "simone",
+      text: "Simone Samuel"
+    },
+    {
+      value: "fred",
+      text: "Fred Jackson"
+    }
+  ]
+}) }}
+{% endset -%}
+
+    {{ govukRadios({
+        idPrefix: "who",
+        name: "who",
+        fieldset: {
+            legend: {
+            html:
+            "   <h1 class=govuk-fieldset__heading>
+                    <span class=govuk-caption-m>Booking an appointment for John Smith</span>
+                    Who will the appointment be with?
+                </h1>
+            ",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+            }
+        },
+        items: [
+            {
+                value: "me",
+                text: "Me, Terry Archer"
+            },
+            {
+                value: "next-available",
+                text: "The next available work coach"
+            },
+            {
+                value: "different-work-coach",
+                text: "A different work coach",
+                conditional: {
+                    html: otherHtml
+                }
+            },
+            {
+                divider: "or"
+            },
+            {
+                value: "work-coach-manager",
+                text: "Ask my manager",
+                hint: {
+                    text: "let Collette Webster decide who is assigned this appointment"
+                }
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Continue"
+    }) }}
+    </form>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+Check answers | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "book-appointment" %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+
+    <h1 class="govuk-heading-l">Check appointment</h1>
+
+    {{ govukSummaryList({
+        rows: [
+            {
+                key: {
+                    text: "Type"
+                },
+                value: {
+                    text: "Work search review"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "type",
+                        text: "Change",
+                        visuallyHiddenText: "type"
+                    }
+                    ]
+                }
+            },
+            {
+                key: {
+                    text: "Where"
+                },
+                value: {
+                    text: "Telephone"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "where",
+                        text: "Change",
+                        visuallyHiddenText: "where"
+                    }
+                    ]
+                }
+            },
+            {
+                key: {
+                    text: "Duration"
+                },
+                value: {
+                    text: "10 minutes"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "duration",
+                        text: "Change",
+                        visuallyHiddenText: "duration"
+                    }
+                    ]
+                }
+            },
+            {
+                key: {
+                    text: "Work coach"
+                },
+                value: {
+                    text: "Terry Archer"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "who",
+                        text: "Change",
+                        visuallyHiddenText: "work coach"
+                    }
+                    ]
+                }
+            },
+            {
+                key: {
+                    text: "Date and time"
+                },
+                value: {
+                    text: "22 September at 10:15am"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "when",
+                        text: "Change",
+                        visuallyHiddenText: "when"
+                    }
+                    ]
+                }
+            }
+        ]
+    }) }}
+
+    {{ govukInsetText({
+        text: "This booking will be sent to the claimant email@gmail.com"
+    }) }}
+
+    {{ govukCheckboxes({
+        idPrefix: "outlook",
+        name: "outlook",
+        items: [
+            {
+            value: "sendon",
+            text: "Send this booking to my email address",
+            checked: true
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Book this appointment",
+        href: "complete"
+    }) }}
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

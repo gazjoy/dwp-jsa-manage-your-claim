@@ -13,7 +13,8 @@ Where | {{ serviceName }}
 
 {% block content %}
     {% include "includes/back.html" %}
-    <form action="type" method="post">
+    <form action="where" method="post">
+
     {{ govukRadios({
         idPrefix: "where",
         name: "where",
@@ -31,16 +32,16 @@ Where | {{ serviceName }}
         },
         items: [
             {
-            value: "telephone",
-            text: "Over the telephone"
+                value: "telephone",
+                text: "Over the telephone"
             },
             {
-            value: "jcp",
-            text: "In my job centre"
+                value: "video",
+                text: "Over a video call"
             },
             {
-            value: "home",
-            text: "At the claimants home"
+                value: "jcp",
+                text: "In my job centre, face to face"
             }
         ]
     }) }}
