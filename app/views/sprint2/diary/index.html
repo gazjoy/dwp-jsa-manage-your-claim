@@ -1,0 +1,86 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+Diary | {{ serviceName }}
+{% endblock %}
+
+{% if data['week'] === "0"  %}
+    {% set activeNav = "this-week" %}
+{% elif data['week'] === '1' %}
+    {% set activeNav = "next-week" %}
+{% elif data['week'] === '2' %}
+    {% set activeNav = "two-weeks" %}
+{% endif %}
+
+{% block content %}
+    <h1 class="govuk-heading-l">
+        {% if data['week'] === "0"  %}
+            Your diary this week
+            <span class="govuk-caption-l">21 to 26 September 2020</span>
+        {% elif data['week'] === '1' %}
+            Your diary next week
+            <span class="govuk-caption-l">28 September to 2 October 2020</span>
+        {% elif data['week'] === '2' %}
+            Your diary in two weeks
+            <span class="govuk-caption-l">5 to 9 October 2020</span>
+        {% endif %}
+    </h1>
+
+    {% set mondayHtml %}
+        {% include "sprint2/diary/monday.html" %}
+    {% endset %}
+
+    {% set tuesdayHtml %}
+        {% include "sprint2/diary/tuesday.html" %}
+    {% endset %}
+
+    {% set wednesdayHtml %}
+        {% include "sprint2/diary/wednesday.html" %}
+    {% endset %}
+
+    {% set thursdayHtml %}
+        {% include "sprint2/diary/tuesday.html" %}
+    {% endset %}
+
+    {% set fridayHtml %}
+        {% include "sprint2/diary/tuesday.html" %}
+    {% endset %}
+
+    {{ govukTabs({
+        items: [
+            {
+                label: "Monday (today)",
+                id: "monday",
+                panel: {
+                    html: mondayHtml
+                }
+            }, {
+                label: "Tuesday",
+                id: "tuesday",
+                panel: {
+                    html: tuesdayHtml
+                }
+            }, {
+                label: "Wednesday",
+                id: "wednesday",
+                panel: {
+                    html: wednesdayHtml
+                }
+            }, {
+                label: "Thursday",
+                id: "thursday",
+                panel: {
+                    html: thursdayHtml
+                }
+            }, 
+            {
+                label: "Friday",
+                id: "friday",
+                panel: {
+                    html: fridayHtml
+                }
+            }
+        ]
+    }) }}
+{% endblock %}

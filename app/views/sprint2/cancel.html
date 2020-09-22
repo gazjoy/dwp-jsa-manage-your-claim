@@ -1,1 +1,81 @@
-to add
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+  Cancel appointment | {{ serviceName }}
+{% endblock %}
+
+
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+
+{% block content %}
+    {% include "includes/back.html" %}
+
+    <h1 class="govuk-heading-l">Are you sure you want to cancel this appointment?</h1>
+
+    {{ govukSummaryList({
+        rows: [
+            {
+                key: {
+                    text: "Date and time"
+                },
+                value: {
+                    text: "22 September at 10:15am"
+                }
+            },
+            {
+                key: {
+                    text: "Type"
+                },
+                value: {
+                    text: "Work search review"
+                }
+            }, {
+                key: {
+                    text: "Conducted"
+                },
+                value: {
+                    text: "On the phone"
+                }
+            }, {
+                key: {
+                    text: "Duration"
+                },
+                value: {
+                    text: "20 minutes"
+                }
+            }, {
+                key: {
+                    text: "Markers"
+                },
+                value: {
+                    text: "Claimant is potentially violent"
+                }
+            }, {
+                key: {
+                    text: "Work coach"
+                },
+                value: {
+                    text: "Terry Archer"
+                }
+            }
+        ]
+    }) }}
+
+    {{ govukButton({
+        text: "Yes, cancel this appointment",
+        classes: "govuk-!-margin-right-5"
+    }) }}
+
+    <p><a href="diary?week=0#tuesday">No, return to diary</a></p>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

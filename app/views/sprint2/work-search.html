@@ -103,10 +103,10 @@
             }
             }, {
                 key: {
-                    text: "Where"
+                    text: "Conducted"
                 },
                 value: {
-                    text: "Phone"
+                    text: "On the phone"
                 },
                 actions: {
                     items: [
@@ -256,6 +256,11 @@
 
     </form>
 
+    {% if data['today'] === "1"  %}
+    <a href="?today=0" style="background-color: black; color: white; display: inline-block; padding: 5px 10px; position: fixed; bottom: 0; right: 0;">Booked view</a>
+    {% else %}
+    <a href="?today=1" style="background-color: black; color: white; display: inline-block; padding: 5px 10px; position: fixed; bottom: 0; right: 0;">Today view</a>
+    {% endif %}
 {% endblock %}
 
 
