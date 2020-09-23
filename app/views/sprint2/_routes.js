@@ -29,4 +29,8 @@ router.post('/when', function (req, res) {
   res.redirect('check');
 })
 
+router.post('/work-search', function (req, res) {
+  res.redirect('work-search?today=2');
+})
+
 module.exports = router

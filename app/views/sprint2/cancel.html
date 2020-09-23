@@ -15,7 +15,10 @@
 {% block content %}
     {% include "includes/back.html" %}
 
-    <h1 class="govuk-heading-l">Are you sure you want to cancel this appointment?</h1>
+    <h1 class="govuk-heading-l">
+        <span class=govuk-caption-m>Cancelling an appointment for John Smith</span>
+        Are you sure you want to cancel this appointment?
+    </h1>
 
     {{ govukSummaryList({
         rows: [
@@ -60,7 +63,7 @@
                     text: "Work coach"
                 },
                 value: {
-                    text: "Terry Archer"
+                    text: "Sherry Archer"
                 }
             }
         ]

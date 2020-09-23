@@ -12,6 +12,8 @@
     position: relative;
 
     &.has-button {
+        padding-bottom: 2em;
+
         &::before {
             top: 18px;
         }

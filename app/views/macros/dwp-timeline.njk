@@ -7,9 +7,13 @@
 {% if params.items and params.items.length > 0 %}
   <ol class="dwp-timeline">
   {% for item in params.items %}
-    {% if item.button == true %}
+      {% if item.button == true %}
       <li class="dwp-timeline__entry has-button {{ item.classes }}">
         <a href="#" role="button" draggable="false" class="govuk-button js-timeline-expand" data-module="govuk-button">{{ item.buttonText }}</a>
+      </li>
+      {% elif item.bookButton == true %}
+      <li class="dwp-timeline__entry has-button {{ item.classes }}">
+        <a href="{{ item.href }}" role="button" draggable="false" class="govuk-button">{{ item.buttonText }}</a>
       </li>
       {% else %}
       <li class="dwp-timeline__entry {{ item.classes }}">
