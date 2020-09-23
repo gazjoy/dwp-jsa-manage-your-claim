@@ -1,14 +1,19 @@
 <nav class="side-nav">
   <ul>
     <li class="side-nav__item {% if activeNav == 'this-week' %}active{% endif %}">
-      <a href="diary?week=0">This week</a>
+      <a href="/sprint2/diary?week=0">This week</a>
     </li>
     <li class="side-nav__item {% if activeNav == 'next-week' %}active{% endif %}">
-      <a href="diary?week=1">Next week</a>
+      <a href="/sprint2/diary?week=1">Next week</a>
     </li>
     <li class="side-nav__item {% if activeNav == 'two-weeks' %}active{% endif %}">
-      <a href="diary?week=2">In two weeks</a>
-    </li> 
+      <a href="/sprint2/diary?week=2">In two weeks</a>
+    </li>
+
+    <li><hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></li>
+
+    <li class="side-nav__item {% if activeNav == 'manage' %}active{% endif %}"><a href="/sprint2/diary/manage">Manage your diary preferences</a></li>
+    {# <li class="side-nav__item {% if activeNav == 'block' %}active{% endif %}"><a href="#">Block out a diary slot</a></li> #}
 
   </ul>
 </nav>

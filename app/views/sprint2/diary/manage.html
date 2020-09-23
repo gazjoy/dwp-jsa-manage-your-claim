@@ -1,0 +1,98 @@
+
+{% extends "layout_agent.html" %}
+
+{% block pageTitle %}
+Diary | {{ serviceName }}
+{% endblock %}
+
+{% set activeNav = "manage" %}
+
+{% block content %}
+    <h1 class="govuk-heading-l">Manage your diary preferences</h1>
+
+    <form action="" method="post">
+
+    {{ govukInput({
+        label: {
+            text: "Your start time"
+        },
+        classes: "govuk-input--width-4",
+        id: "event-name",
+        name: "event-name",
+        value: "09:00"
+    }) }}
+    {{ govukInput({
+        label: {
+            text: "Your end time"
+        },
+        classes: "govuk-input--width-4",
+        id: "event-name",
+        name: "event-name",
+        value: "16:00"
+    }) }}
+
+    {{ govukInput({
+        label: {
+            text: "Your lunch start time"
+        },
+        classes: "govuk-input--width-4",
+        id: "event-name",
+        name: "event-name",
+        value: "13:00"
+    }) }}
+
+    {{ govukSelect({
+        id: "lunch-duration",
+        name: "lunch-duration",
+        label: {
+            text: "Lunch duration"
+        },
+        items: [
+            {
+            value: "1hr",
+            text: "1 hour",
+            selected: true
+            },
+            {
+            value: "45min",
+            text: "45 minutes",
+            selected: true
+            },
+            {
+            value: "30min",
+            text: "30 minutes"
+            }
+        ]
+    }) }}
+
+    {{ govukInput({
+        label: {
+            text: "Your morning break start time"
+        },
+        hint: {
+            text: "breaks are 15 minutes"
+        },
+        classes: "govuk-input--width-4",
+        id: "event-name",
+        name: "event-name",
+        value: "10:30"
+    }) }}
+
+    {{ govukInput({
+        label: {
+            text: "Your afternoon break start time"
+        },
+        hint: {
+            text: "breaks are 15 minutes"
+        },
+        classes: "govuk-input--width-4",
+        id: "event-name",
+        name: "event-name",
+        value: "15:00"
+    }) }}
+
+    {{ govukButton({
+        text: "Save preferences"
+    }) }}
+    </form>
+{% endblock %}
