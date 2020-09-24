@@ -1,0 +1,161 @@
+<table class="govuk-table dwp-diary">
+    <caption class="govuk-table__caption govuk-visually-hidden">Monday</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" width="50">Time</th>
+            <th scope="col" class="govuk-table__header">Appointment</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">9:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Staff meeting",
+                    colour: "grey",
+                    time: "09:00 - 10:00am",
+                    classes: "dwp-diary__event--preference"
+                }) }}
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">10:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "10:10 - 10:20am",
+                    claimant: "John Smith",
+                    conducted: "on the phone",
+                    markers: "Uses walking aids"
+                }) }}
+
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "10:20 - 10:30am",
+                    claimant: "James Smith Amber",
+                    conducted: "on the phone",
+                    markers: "potentially violent"
+                }) }}
+
+                {{ dwpDiaryEvent({
+                    event: "Empty slot",
+                    colour: "green",
+                    time: "10:30 - 10:45am",
+                    empty: true,
+                    classes: "dwp-diary__event--empty"
+                }) }}
+
+                {{ dwpDiaryEvent({
+                    event: "New claim",
+                    colour: "red",
+                    time: "10:45 - 11:45am",
+                    claimant: "Marvin Gordon",
+                    conducted: "on the phone"
+                }) }}
+            </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">11:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Digital support",
+                    colour: "yellow",
+                    time: "11:50 - 12:25pm",
+                    claimant: "Ryan Dee",
+                    conducted: "in the job centre"
+                }) }}
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">12:00</th>
+            <td class="govuk-table__cell">
+               {{ dwpDiaryEvent({
+                    event: "Digital support",
+                    colour: "yellow",
+                    time: "12:30 - 13:00pm",
+                    claimant: "Kelly Standish",
+                    conducted: "in the job centre"
+                }) }}
+            </td>
+        </tr>
+       
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">13:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Lunch",
+                    colour: "grey",
+                    time: "13:00 - 14:00pm",
+                    classes: "dwp-diary__event--preference"
+                }) }}
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">14:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "14:00 - 14:10pm",
+                    claimant: "Kelly Standish",
+                    conducted: "in the job centre"
+                }) }}
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "14:10 - 14:15pm",
+                    claimant: "Sarah Trevail",
+                    conducted: "on the phone"
+                }) }}
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "14:15 - 14:30pm",
+                    claimant: "Harry Salmonds",
+                    conducted: "in the job centre"
+                }) }}
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "14:40 - 14:55pm",
+                    claimant: "Reggie Turpington",
+                    conducted: "in the job centre"
+                }) }}
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">15:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Empty slot",
+                    colour: "green",
+                    time: "15:00 - 15:10pm",
+                    empty: true,
+                    classes: "dwp-diary__event--empty"
+                }) }}
+                {{ dwpDiaryEvent({
+                    event: "New claim",
+                    colour: "red",
+                    time: "15:10 - 16:10pm",
+                    claimant: "Richard Fletcher",
+                    conducted: "in the job centre"
+                }) }}
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">16:00</th>
+            <td class="govuk-table__cell">
+                {{ dwpDiaryEvent({
+                    event: "Work search review",
+                    colour: "blue",
+                    time: "16:15 - 16:30pm",
+                    claimant: "Thomas Onions",
+                    conducted: "in the job centre"
+                }) }}
+            </td>
+        </tr>
+    </tbody>
+</table>

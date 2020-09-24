@@ -1,0 +1,207 @@
+<table class="govuk-table">
+    <caption class="govuk-table__caption govuk-visually-hidden">Monday</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Time</th>
+            <th scope="col" class="govuk-table__header">Appointment</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row dwp-table-row">
+            <th scope="row" class="govuk-table__header">9:00</th>
+            <td class="govuk-table__cell">
+                <p>Staff meeting</p>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">10:00</th>
+            <td class="govuk-table__cell">
+                <h3 class="govuk-heading-s"><a href="work-search">Hugh Stephens</a></h3>
+                {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Type"
+                        },
+                        value: {
+                            text: "New claim"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "type",
+                                text: "Change",
+                                visuallyHiddenText: "type"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Conducted"
+                        },
+                        value: {
+                            text: "On the phone"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "where",
+                                text: "Change",
+                                visuallyHiddenText: "where"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Duration"
+                        },
+                        value: {
+                            text: "1 hour"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "duration",
+                                text: "Change",
+                                visuallyHiddenText: "duration"
+                            }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="cancel">Cancel appointment</a></p>
+            </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">11:00</th>
+            <td class="govuk-table__cell">
+                <h3 class="govuk-heading-s"><a href="work-search">Steve Jacobs</a></h3>
+                {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Type"
+                        },
+                        value: {
+                            text: "New claim"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "type",
+                                text: "Change",
+                                visuallyHiddenText: "type"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Conducted"
+                        },
+                        value: {
+                            text: "On the phone"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "where",
+                                text: "Change",
+                                visuallyHiddenText: "where"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Duration"
+                        },
+                        value: {
+                            text: "1 hour"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "duration",
+                                text: "Change",
+                                visuallyHiddenText: "duration"
+                            }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="cancel">Cancel appointment</a></p>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">12:00</th>
+            <td class="govuk-table__cell">
+                <h3 class="govuk-heading-s"><a href="work-search">Stephen Clarke</a></h3>
+                {{ govukSummaryList({
+                rows: [
+                    {
+                        key: {
+                            text: "Type"
+                        },
+                        value: {
+                            text: "New claim"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "type",
+                                text: "Change",
+                                visuallyHiddenText: "type"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Conducted"
+                        },
+                        value: {
+                            text: "On the phone"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "where",
+                                text: "Change",
+                                visuallyHiddenText: "where"
+                            }
+                            ]
+                        }
+                    }, {
+                        key: {
+                            text: "Duration"
+                        },
+                        value: {
+                            text: "1 hour"
+                        },
+                        actions: {
+                            items: [
+                            {
+                                href: "duration",
+                                text: "Change",
+                                visuallyHiddenText: "duration"
+                            }
+                            ]
+                        }
+                    }
+                ]
+                }) }}
+                <p><a href="cancel">Cancel appointment</a></p>
+            </td>
+        </tr>
+
+        <tr class="govuk-table__row dwp-table-row">
+            <th scope="row" class="govuk-table__header">12:00</th>
+            <td class="govuk-table__cell">
+                <h3 class="govuk-heading-s">Booked annual leave</h3>
+                <p>Half day's holiday</p>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

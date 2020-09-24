@@ -1,9 +1,9 @@
 var express = require('express')
 var router = express.Router()
 
-router.get('/', function (req, res) {
-  res.redirect('sprint2/diary?week=0');
-})
+// router.get('/', function (req, res) {
+//   res.redirect('sprint2/diary?week=0');
+// })
 
 router.get('/book-appointment', function (req, res) {
   res.redirect('type');

@@ -1,0 +1,35 @@
+{% from "govuk/components/tag/macro.njk"              import govukTag %}
+
+{% macro dwpDiaryEvent(params) %}
+<div class="dwp-diary__event {{ params.classes }}">
+    <div class="dwp-diary__event-header">
+        {{govukTag({
+            text: params.event,
+            classes: "govuk-tag--"+ params.colour
+        })}}
+        <p class="govuk-body-s dwp-diary__event-time">{{ params.time }}</p>
+    </div>
+    {% if params.claimant %}
+        <p class="govuk-body-s">with <a href="work-search">{{ params.claimant }}</a> {{ params.conducted }}.</p>
+    {% endif %}
+    {% if params.markers %}
+        <p class="govuk-body-s">{{ params.markers }}</p>
+    {% endif %}
+    {% if params.claimant %}
+    <div class="dwp-diary__event-footer">
+        <p class="govuk-body-s">
+            <a href="change">Change appointment</a>
+        </p>
+    </div>
+    {% endif %}
+
+    {% if params.empty %}
+    <div class="dwp-diary__event-footer">
+        <p class="govuk-body-s">
+            <a href="book-appointment">Book immediate appointment</a>
+        </p>
+    </div>
+    {% endif %}
+
+</div>
+{% endmacro %}

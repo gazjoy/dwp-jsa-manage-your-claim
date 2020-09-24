@@ -1,10 +1,10 @@
 {% extends "layout_claimant.html" %}
 
 {% block pageTitle %}
-Check answers | {{ serviceName }}
+Changing appointment | {{ serviceName }}
 {% endblock %}
 
-{% set activeNav = "book-appointment" %}
+{# {% set activeNav = "book-appointment" %} #}
 
 {% block beforeContent %}
  {% include "sprint2/nav.html" %}
@@ -13,10 +13,47 @@ Check answers | {{ serviceName }}
 {% block content %}
     {% include "includes/back.html" %}
 
-    <h1 class="govuk-heading-l">Check appointment</h1>
+    <h1 class="govuk-heading-l">Change appointment</h1>
 
     {{ govukSummaryList({
         rows: [
+
+            {
+                key: {
+                    text: "Date and time"
+                },
+                value: {
+                    text: "22 September at 10:15am"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "when",
+                        text: "Change",
+                        visuallyHiddenText: "when"
+                    }
+                    ]
+                }
+            },
+
+            {
+                key: {
+                    text: "Work coach"
+                },
+                value: {
+                    text: "Sherry Archer"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "who",
+                        text: "Change",
+                        visuallyHiddenText: "work coach"
+                    }
+                    ]
+                }
+            },
+
             {
                 key: {
                     text: "Type"
@@ -30,23 +67,6 @@ Check answers | {{ serviceName }}
                         href: "type",
                         text: "Change",
                         visuallyHiddenText: "type"
-                    }
-                    ]
-                }
-            },
-            {
-                key: {
-                    text: "Conducted"
-                },
-                value: {
-                    text: "On the phone"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "where",
-                        text: "Change",
-                        visuallyHiddenText: "where"
                     }
                     ]
                 }
@@ -70,34 +90,17 @@ Check answers | {{ serviceName }}
             },
             {
                 key: {
-                    text: "Work coach"
+                    text: "Conducted"
                 },
                 value: {
-                    text: "Sherry Archer"
+                    text: "On the phone"
                 },
                 actions: {
                     items: [
                     {
-                        href: "who",
+                        href: "where",
                         text: "Change",
-                        visuallyHiddenText: "work coach"
-                    }
-                    ]
-                }
-            },
-            {
-                key: {
-                    text: "Date and time"
-                },
-                value: {
-                    text: "22 September at 10:15am"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "when",
-                        text: "Change",
-                        visuallyHiddenText: "when"
+                        visuallyHiddenText: "where"
                     }
                     ]
                 }
@@ -106,7 +109,7 @@ Check answers | {{ serviceName }}
     }) }}
 
     {{ govukInsetText({
-        text: "This booking will be sent to the claimant johnsmith769@gmail.com"
+        text: "This updated booking will be sent to the claimant johnsmith769@gmail.com"
     }) }}
 
     {{ govukCheckboxes({
@@ -115,16 +118,18 @@ Check answers | {{ serviceName }}
         items: [
             {
             value: "sendon",
-            text: "Send this booking to my email address",
+            text: "Send update to my outlook calendar",
             checked: true
             }
         ]
     }) }}
 
     {{ govukButton({
-        text: "Book this appointment",
+        text: "Change this appointment",
         href: "complete"
     }) }}
+
+    <p><a href="cancel">Cancel this appointment</a></p>
 
 {% endblock %}
 

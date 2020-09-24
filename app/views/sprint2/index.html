@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "includes/cookie-banner.html" %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Sprint #2 – Appointment booking
+        <span class="govuk-caption-m">September 17 to 30</span>
+      </h1>
+
+        {% include 'sprint2/hypotheses.html' %}
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h2 class="govuk-heading-s">Second iteration</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href='diary2?week=0'>Day diary view</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h2 class="govuk-heading-s">First iteration</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href='diary?week=0'>Day diary view</a></li>
+            <li><a href='diary/manage'>Diary preferences view</a></li>
+            {# <li><a href='diary3?week=0'>Week diary view</a></li> #}
+            <li><a href='type'>Book appointment flow - no routing</a></li>
+            <li><a href='work-search'>Appointment booked - work search view - up to 14 days before</a></li>
+            <li><a href='work-search?today=1'>Appointment booked - work search view - on the day</a></li>
+            <li><a href='work-search?today=2'>Appointment notes added - work search view - failed to attend</a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    </div>
+  </div>
+
+{% endblock %}
