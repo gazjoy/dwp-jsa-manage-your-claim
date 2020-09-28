@@ -19,8 +19,9 @@ Booking complete | {{ serviceName }}
 
     <p>You have been sent a confirmation of this booking by email.</p>
 
-    <p>A confirmation of this booking has also been sent to email@gmail.com</p>
-
+    {{ govukInsetText({
+        html: "A confirmation of this booking has been sent to the claimant <strong>johnsmith769@gmail.com</strong>"
+    }) }}
 
 
 {% endblock %}

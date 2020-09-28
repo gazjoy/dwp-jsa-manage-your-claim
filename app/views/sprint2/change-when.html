@@ -1,0 +1,29 @@
+
+{% extends "layout_claimant.html" %}
+
+{% block pageTitle %}
+When | {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+ {% include "sprint2/nav.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "includes/back.html" %}
+
+    <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">Changing an appointment for John Smith</span>
+        What day do you want to book the appointment on?
+    </h1>
+
+    <a href="change-when2" >
+        <img src="/public/images/cal1.png" alt="calendar1" style="max-width: 72em; display: block; border: 1px solid gainsboro;" />
+    </a>
+
+{% endblock %}
+
+
+{% block afterContent %}
+
+{% endblock %}

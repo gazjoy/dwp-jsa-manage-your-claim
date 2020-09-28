@@ -28,23 +28,28 @@ Diary | {{ serviceName }}
     </h1>
 
     {% set mondayHtml %}
+        <h3 class="govuk-heading-m">Monday</h3>
         {% include "sprint2/diary2/monday.html" %}
     {% endset %}
 
     {% set tuesdayHtml %}
-        {% include "sprint2/diary/tuesday.html" %}
+        <h3 class="govuk-heading-m">Tuesday</h3>
+        {% include "sprint2/diary2/monday.html" %}
     {% endset %}
 
     {% set wednesdayHtml %}
-        {% include "sprint2/diary/wednesday.html" %}
+        <h3 class="govuk-heading-m">Wednesday</h3>
+        {% include "sprint2/diary2/monday.html" %}
     {% endset %}
 
     {% set thursdayHtml %}
-        {% include "sprint2/diary/thursday.html" %}
+        <h3 class="govuk-heading-m">Thursday</h3>
+        {% include "sprint2/diary2/monday.html" %}
     {% endset %}
 
     {% set fridayHtml %}
-        {% include "sprint2/diary/tuesday.html" %}
+        <h3 class="govuk-heading-m">Friday</h3>
+        {% include "sprint2/diary2/monday.html" %}
     {% endset %}
 
     {{ govukTabs({
