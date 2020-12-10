@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+{% set serviceName = data['apply-service-name'] %}
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "includes/back.html" %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Provide supporting evidence</h1>
+
+    <p>We need you to provide evidence to support your application.</p>
+
+    <p>Providing evidence now means we can make a quicker decision about your claim for New Style JSA.</p>
+
+    <p>You will need to upload a copy of these documents.</p>
+
+    {{ govukButton({
+        text: "Upload my evidence now",
+        href: "upload"
+    }) }}
+
+    <p><a href="declaration">I want to provide my evidence later</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

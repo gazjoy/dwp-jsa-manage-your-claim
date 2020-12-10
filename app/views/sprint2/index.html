@@ -1,25 +1,17 @@
 
-{% extends "layout.html" %}
+{% extends "layout_context.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-{% endblock %}
-
 {% block content %}
+
+{% include "includes/back.html" %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+      
       <h1 class="govuk-heading-l">
         Sprint #2 – Appointment booking
         <span class="govuk-caption-m">September 17 to 30</span>

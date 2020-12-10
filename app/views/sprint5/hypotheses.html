@@ -1,0 +1,85 @@
+{% set sprintSummary %}
+<h3 class='govuk-heading-s'>Hypothesis #1 – providing evidence</h3>
+{{ govukSummaryList({
+  rows: [
+      {
+          key: {
+              text: "We believe that"
+          },
+          value: {
+              text: "citizens are confident in uploading documents and will provide any required evidence during the application rather than at a later date"
+          }
+      },
+      {
+          key: {
+              text: "For"
+          },
+          value: {
+              text: "citizens"
+          }
+      },
+      {
+          key: {
+              text: "will acheive"
+          },
+          value: {
+              html: "
+                <p>fewer requests for additional information and faster decisions</p>
+              "
+          }
+      },
+      {
+          key: {
+              text: "validated by"
+          },
+          value: {
+              text: "one on one user research"
+          }
+      }
+  ]
+  }) }}
+
+  <h3 class='govuk-heading-s'>Hypothesis #2 – getting support to provide evidence</h3>
+  {{ govukSummaryList({
+    rows: [
+        {
+            key: {
+                text: "We believe that"
+            },
+            value: {
+                text: "citizens expect there to be support if they need help with submitting evidence"
+            }
+        },
+        {
+            key: {
+                text: "for"
+            },
+            value: {
+                text: "citizens"
+            }
+        },
+        {
+            key: {
+                text: "will acheive"
+            },
+            value: {
+                text: "confidence that they provide us with the required evidence in a legible format"
+            }
+        },
+        {
+            key: {
+                text: "validated by"
+            },
+            value: {
+                text: "one on one user research"
+            }
+        }
+    ]
+    }) }}
+  {% endset %}
+
+
+{{ govukDetails({
+    summaryText: "View team hypotheses",
+    html: sprintSummary
+}) }}

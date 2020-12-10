@@ -1,29 +1,39 @@
 
-{% extends "layout.html" %}
+{% extends "layout_context.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+{% include "includes/back.html" %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+      
       <h1 class="govuk-heading-l">
         Sprint #5 – Evidence
-        <span class="govuk-caption-m">December 9 to 12</span>
       </h1>
 
-        {% include 'sprint2/hypotheses.html' %}
+        {% include 'sprint5/hypotheses.html' %}
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <h2 class="govuk-heading-s">First iteration</h2>
+        <h2 class="govuk-heading-m">Prototypes</h2>
+        <h2 class="govuk-heading-s"><a href='sprint5/a/check-answers'>A: Asking for evidence before the application has been submitted</a></h2>
+        <p>Asking at the time we are expecting users to have the information to hand.</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-s"><a href='sprint5/start'>B: Asking for evidence after the application has been submitted</a></h2>
+        <p>Offering a feature to provide evidence later means:</p>
         <ul class="govuk-list govuk-list--bullet">
-            <li><a href='sprint5/start'>Upload file</a></li>
+            <li>Processors can start to process the application</li>
+            <li>Citizens don't need evidence they might not have, to hand during the application</li>
         </ul>
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+        <p>Could we offer both methods? - "Don't worry you can send us this at a later time"</p>
     </div>
   </div>
 
