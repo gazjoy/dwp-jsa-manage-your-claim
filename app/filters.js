@@ -38,6 +38,29 @@ module.exports = function (env) {
 
   ------------------------------------------------------------------ */
 
+
+  filters.getNextSixMonths = function (startMonth) {
+    const COUNT = 6
+    const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const NAME_TOTAL = MONTH_NAMES.length
+
+    startMonth = parseInt(startMonth) < 12 ? parseInt(startMonth) : 0
+
+    let nextSixMonths = []
+    for (let i = 0 + startMonth; i < COUNT + startMonth; i++) {
+      const ROW = Math.floor(i / NAME_TOTAL)
+      const ROW_COUNT = ROW * NAME_TOTAL
+      const STEP = i - ROW_COUNT
+
+      nextSixMonths.push({
+        value: `${MONTH_NAMES[STEP].toLowerCase()}-${(ROW + 1)}`,
+        text: MONTH_NAMES[STEP]
+      })
+    }
+
+    return nextSixMonths
+  }
+  
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */

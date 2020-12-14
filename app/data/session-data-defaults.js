@@ -21,6 +21,6 @@ module.exports = {
 
   // Insert values here
 
-  "apply-service-name": "Apply for New Style Jobseeker's Allowance"
+  "apply-service-name": "Apply for New Style Jobseeker’s Allowance"
 
 }

@@ -5,6 +5,9 @@ var router = express.Router()
 //   res.redirect('sprint5/upload');
 // })
 
+// For "B" we copy pensions section from the newstylejsa prototype
+router.use('/b/9-pensions', require('./b/9-pensions/_routes'))
+
 router.post('/a/uploaded', function (req, res) {
   var answer = req.session.data['moreEvidence'];
   if (answer === 'yes') {
