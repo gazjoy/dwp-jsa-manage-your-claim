@@ -9,10 +9,10 @@
 {% endblock %}
 
 {% block content %}
-
-  {% set currentlyworking = false %}
+  {# {% set currentlyworking = false %}
   {% set jservice = false %}
   {% set resultjservice = "no" %}
+  {% set startDateItems = todaysDate.original | moment %} #}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -291,7 +291,7 @@
               text: "Have you had a job that ended in the last 6 months?"
             },
             value: {
-              html: "No"
+              html: "Yes"
             },
             actions: {
               items: [
@@ -302,6 +302,115 @@
           }
         ]
       }) }}
+
+      <!-- FIRST PREVIOUS EMPLOYMENT -->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h3 class="govuk-heading-m">First previous employer</h3>
+        </div>
+        <div class="govuk-grid-column-one-quarter govuk-align-right" style="text-align: right;">
+          <a href="7-previous-employment/when-employer" class="govuk-body">Change</a>
+        </div>
+      </div>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "When did you work for this employer?"
+            },
+            value: {
+              html: "25/08/2018 – 3/9/2018"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Why did this job end?"
+            },
+            value: {
+              html: "Other"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Can you provide more detail?"
+            },
+            value: {
+              html: "I was made redundant from furlough"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is the name of your previous employer?"
+            },
+            value: {
+              html: "Tesco"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is the address of your previous employer?"
+            },
+            value: {
+              html: "1 Sample Lane, Sampletown. SA4 7SH"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is the telephone number of your previous employer (optional)?"
+            },
+            value: {
+              html: "01234984123"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters govuk-!-margin-bottom-9">
+          <a href="#" class="govuk-body">Add another employer</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter govuk-align-right govuk-!-margin-bottom-9">
+          <a href="#" class="govuk-body">Remove employer details</a>
+        </div>
+      </div>
 
       <!-- WORKING OR CLAIMING BENEFITS ABROAD -->
       <h2 class="govuk-heading-m">Working or claiming benefit overseas</h2>
@@ -455,7 +564,7 @@
         <div class="govuk-grid-column-three-quarters govuk-!-margin-bottom-9">
           <a href="#" class="govuk-body">Add another current pension</a>
         </div>
-        <div class="govuk-grid-column-one-quarter govuk-align-right govuk-!-margin-bottom-9" style="text-align: right;">
+        <div class="govuk-grid-column-one-quarter govuk-align-right govuk-!-margin-bottom-9">
           <a href="#" class="govuk-body">Remove pension details</a>
         </div>
       </div>
@@ -471,19 +580,98 @@
               text: "Do you have a pension or annuity that you could be paid now, but have decided not to take?"
             },
             value: {
-              html: "No"
+              html: "Yes"
             },
             actions: {
               items: [
                 {
-                  href: "#",
-                  text: "Change"
                 }
               ]
             }
           }
         ]
       }) }}
+
+      <!-- FIRST DEFERRED PENSION -->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <h3 class="govuk-heading-m">First deferred pension</h3>
+        </div>
+        <div class="govuk-grid-column-one-quarter govuk-align-right" style="text-align: right;">
+          <a href="9-pensions/9b-deferred-pension/provider-name" class="govuk-body">Change</a>
+        </div>
+      </div>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "What is the name of your pension or annuity provider?"
+            },
+            value: {
+              html: "Tesco"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What is the address of your pension or annuity provider?"
+            },
+            value: {
+              html: "2 Sample Lane, Sampletown. SA4 7SH"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "How often should your deferred pension or annuity be paid?"
+            },
+            value: {
+              html: "Monthly"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "What’s your gross pension?"
+            },
+            value: {
+              html: "£238"
+            },
+            actions: {
+              items: [
+                {
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters govuk-!-margin-bottom-9">
+          <a href="#" class="govuk-body">Add another deferred pension</a>
+        </div>
+        <div class="govuk-grid-column-one-quarter govuk-align-right govuk-!-margin-bottom-9">
+          <a href="#" class="govuk-body">Remove pension details</a>
+        </div>
+      </div>
 
       <!-- EDUCATION AND TRAINING -->
       <h2 class="govuk-heading-m">Education and training</h2>
@@ -501,7 +689,7 @@
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "10-education",
                   text: "Change"
                 }
               ]
@@ -510,9 +698,10 @@
         ]
       }) }}
 
+
       {{ govukButton({
         text: "Continue",
-        href: "provide-evidence"
+        href: "declaration"
       }) }}
 
-{% endblock %}
+    {% endblock %}

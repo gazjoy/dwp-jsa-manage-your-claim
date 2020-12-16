@@ -7,6 +7,7 @@ var router = express.Router()
 
 // For "B" we copy pensions section from the newstylejsa prototype
 router.use('/b/9-pensions', require('./b/9-pensions/_routes'))
+router.use('/b/10-education', require('./b/10-education/_routes'))
 
 router.post('/a/uploaded', function (req, res) {
   var answer = req.session.data['moreEvidence'];
