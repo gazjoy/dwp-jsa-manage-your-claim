@@ -1,0 +1,38 @@
+
+{% extends "layout_context.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+{% include "includes/back.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">
+        Sprint #6 – Notifications, application complete to decision
+      </h1>
+
+        {% include 'sprint6/hypotheses.html' %}
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <h2 class="govuk-heading-m">Prototypes</h2>
+        <h2 class="govuk-heading-s"><a href='sprint6/confirmation'>Application confirmation</a></h2>
+        <p>Seen at the end of the the application.</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-s"><a href='sprint6/contact-centre-text'>Text message sent from benefit processing</a></h2>
+        <p>Up to 48 hours after the application is submitted.</p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-s"><a href='sprint6/contact-centre-email'>Email Message sent from benefit processing</a></h2>
+        <p>Up to 48 hours after the application is submitted.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

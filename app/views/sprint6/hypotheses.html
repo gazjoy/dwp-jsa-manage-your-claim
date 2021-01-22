@@ -1,0 +1,46 @@
+{% set sprintSummary %}
+<h3 class='govuk-heading-s'>Hypothesis #1 – timely updates</h3>
+{{ govukSummaryList({
+  rows: [
+      {
+          key: {
+              text: "We believe that"
+          },
+          value: {
+              text: "providing timely updates during the period of application to decision"
+          }
+      },
+      {
+          key: {
+              text: "For"
+          },
+          value: {
+              text: "claimants"
+          }
+      },
+      {
+          key: {
+              text: "will acheive"
+          },
+          value: {
+              html: "
+                <p>reduced anxiety and reduced unnecessary contact with the department</p>
+              "
+          }
+      },
+      {
+          key: {
+              text: "validated by"
+          },
+          value: {
+              text: "one on one user research, surveys"
+          }
+      }
+  ]
+  }) }}
+{% endset %}
+
+{{ govukDetails({
+    summaryText: "View team hypotheses",
+    html: sprintSummary
+}) }}
