@@ -1,0 +1,32 @@
+{% extends "layout_email.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'Your application for New Style Jobseeker’s Allowance' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>Dear ((first name))</p>
+
+        <p>We recently received your application, and we need to check the details you've sent us. 
+        This usually takes us about 10 working days.</p>
+
+        <h2 class="govuk-heading-m">What you can do next</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>take some time to check your CV reflects all your experience and skills</li>
+            <li>register on job sites, especially ones that have relevant work in your field</li>
+            <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if you find a new job</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-m">If you are unable to wait for funds</h2>
+        <p>Check if you are eligible to apply for Universal Credit, a sum could be released early which is taken off future payments.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

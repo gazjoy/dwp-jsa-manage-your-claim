@@ -1,0 +1,39 @@
+{% extends "layout_email.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'Your application for New Style Jobseeker’s Allowance' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>Dear ((first name))</p>
+        
+        <p>We have started to check through your application.</p>
+
+        <p>If everything is straightforward, then the next time we contact you, it will be to 
+        setup an appointment to discuss your job search. This appointment is for you to talk 
+        through the steps you can make to get a new job.</p>
+
+        <p>If you're not eligible, you should receive a letter within a week.</p>
+
+        <h2 class="govuk-heading-m">What you can do next</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>make a record of the job sites you have registered on </li>
+            <li>make sure you have uploaded your latest CV</li>
+            <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if you find a new job</a></li>
+            <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if you change your phone number or address</a></li>
+            
+        </ul>
+        
+        <p>If you need financial support for your accommodation, check to see if you can apply for Universal Credit.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
