@@ -1,0 +1,42 @@
+{% extends "layout_email.html" %}
+
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'Your application for New Style Jobseeker’s Allowance' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>Dear ((first name))</p>
+
+        <p>We’ve got your New Style JSA application.</p>
+
+        <p>We need to check the details you’ve sent us, which usually takes about 14 days.</p>
+
+        <h2 class="govuk-heading-m">What you can do next</h2>
+
+        <p>While we check your details, you should:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>check your CV is up to date</li>
+            <li>look for jobs, for example on <a href="https://www.gov.uk/find-a-job">Find a Job</a></li>
+            <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if your circumstances change</a>, for example if you get a job</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">If you need financial support</h2>
+        <p>If you need help with bills or other costs while we look at your application, <a href="https://www.gov.uk/universal-credit/eligibility">check if you can get 
+        Universal Credit</a>. If you’re eligible, you could:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>get Universal Credit at the same time or instead of New Style JSA</li>
+          <li>apply for an advance payment</li>
+        </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
