@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Manage your new style JSA claim',
+  serviceName: 'New Style JSA future workstream',
 
   // Default port that prototype runs on
   port: '3000',
