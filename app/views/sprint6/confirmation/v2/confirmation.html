@@ -1,5 +1,5 @@
 {% extends "layout_context.html" %}
-
+{% set serviceName = data['apply-service-name'] %}
 {% block pageTitle %}
   DWP - Jobseeker&rsquo;s Allowance
 {% endblock %}
@@ -20,19 +20,21 @@
 
       <h2 class="govuk-heading-m">If you’re eligible</h2>
 
-      <p>If we decide you’re eligible, we’ll contact you about an appointment to agree your claimant commitment, usually within 10 working days. 
-      The appointment will normally be over the phone.</p>
+      <p>If we decide you’re eligible, we’ll contact you about an appointment to agree your claimant commitment. We’ll 
+      usually do this within 14 days. The appointment will normally be over the phone with a work coach.</p>
 
-      <p>You’ll usually get your first payment within 5 working days of your appointment.</p>
+      <p>We’ll aim to pay you within 7 days of your appointment.</p>
 
       <h2 class="govuk-heading-m">If you’re not eligible</h2>
 
-      <p>If we decide you’re not eligible, we’ll send you a letter explaining our decision, usually within 10 working days.</p>
+      <p>If we decide you’re not eligible, we’ll send you a letter explaining our decision. We’ll usually 
+      send the letter within 14 days.</p>
 
       {{ govukInsetText({
         html: "
         <h2 class=govuk-heading-m>Contacting us</h2>
-         <p>You need to <a href='https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances'>contact us to report a change of circumstances</a>, such as starting a new job.</p>
+         <p>You'll need to <a href='https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances'>contact us to report a 
+         change of circumstances</a>, such as starting a new job.</p>
       "
       }) }}
 

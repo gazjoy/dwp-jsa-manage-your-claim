@@ -1,0 +1,78 @@
+{% extends "layout_email.html" %}
+{% set serviceName = data['apply-service-name'] %}
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'New Style Jobseeker’s Allowance service - your application' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>Dear ((first name)) ((last name))</p>
+
+<p>You’ve submitted your New Style Jobseeker’s Allowance (JSA) application.</p>
+<p>You submitted your application on: ((claimSubmittedDate))</p>
+
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p>We’ll check to make sure you’re eligible for New Style JSA.</p>
+
+<h3 class="govuk-heading-m">If you’re eligible</h3>
+
+<p>If we decide you’re eligible, we’ll contact you about an appointment to agree the kinds of things you should do to 
+prepare and look for work. This is called a claimant commitment. We’ll usually contact you about the appointment 
+within 14 days. The appointment will normally be with a work coach over the phone.</p>
+
+<p>We’ll aim to pay you within 7 days of your appointment. We cannot pay you unless you attend this appointment.</p>
+
+<h2 class="govuk-heading-m">Support during the appointment</h2>
+
+<p>If you need support during the appointment, you can have another person with you.</p>
+
+<p>If you need a foreign language interpreter, you’ll need someone with you who can help with interpretation. We do not 
+normally provide interpretation services.</p>
+
+<p>Contact Jobcentre Plus before your appointment if you have a disability or health condition, for example a hearing 
+impairment, which means you cannot attend a phone interview.</p>
+
+<h3 class="govuk-heading-s">Jobcentre Plus</h3>
+<ul class="govuk-list">
+  <li>Telephone: 0800 055 6688</li>
+  <li>Textphone: 0800 023 4888</li>
+  <li><a href="https://www.relayuk.bt.com/">Relay UK</a> (if you cannot hear or speak on the phone): 18001 then 0800 055 6688</li>
+  <li><a href="https://dwpjsanc.signvideo.net/">Video relay service</a> for British Sign Language (BSL) users - 
+  <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the service</a></li>
+  <li>Welsh language: 0800 012 1888</li>
+  <li>Monday to Friday, 8am to 6pm</li>
+  <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+</ul>
+
+<h3 class="govuk-heading-m">If you’re not eligible</h3>
+<p>If we decide you’re not eligible, we’ll send you a letter explaining our decision. 
+We’ll usually send the letter within 14 days.</p>
+
+<h3 class="govuk-heading-m">Change of circumstances</h3>
+<p>You must contact Jobcentre Plus to report a change of circumstances, such as starting a new job.</p>
+
+<h3 class="govuk-heading-m">If we do not contact you</h3>
+<p><a href="https://www.gov.uk/contact-jobcentre-plus/new-benefit-claims">Contact Jobcentre Plus</a> if we do not contact 
+you within xx working days of submitting your application.</p>
+
+<h3  class="govuk-heading-m">Accessibility</h3>
+<p>If you have a disability or health condition, we can provide you with information in a different format, for example:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Braille</li>
+  <li>large print</li>
+  <li>audio</li>
+</ul>
+<p>More information is available on <a href="https://www.gov.uk/guidance/get-help-with-benefits-and-pensions-if-you-have-accessibility-needs">GOV.UK</a>.</p>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
