@@ -1,0 +1,42 @@
+{% extends "layout_email.html" %}
+{% set serviceName = data['apply-service-name'] %}
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'Your application for New Style Jobseeker’s Allowance' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>Dear ((first name))</p>
+
+        <p>We’re getting ready to process your New Style JSA application.</p>
+        <p>We’ll contact you when we start to process it. This will usually be within 7 days.</p>
+
+        <h2 class="govuk-heading-m">Do you need help with housing costs or support for a partner or child?</h2>
+
+        <p>If you’re on a low income you might be able to apply for Universal Credit as part of a dual claim with New Style JSA.</p>
+        <p>Unlike New Style JSA, you can apply with a partner and get support for housing costs, children and childcare.</p>
+        <p>You or your partner must have less than £16,000 in savings or investments to be eligible.</p>
+        <p>Find out <a href="https://www.gov.uk/how-to-claim-universal-credit">how to claim Universal Credit on GOV.UK</a>.</p>
+
+        <h2 class="govuk-heading-m">Next steps</h2>
+
+        <p>While you wait for us to process your application, you should:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>check your CV is up to date</li>
+          <li>look for jobs, for example on the government’s <a href="https://www.gov.uk/find-a-job">Find a Job</a> service</li>
+          <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if your circumstances change</a>, for example if you get a job</li>
+        </ul>
+
+        <p><a href="#">Tell us about your experience of New Style JSA.</a></p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

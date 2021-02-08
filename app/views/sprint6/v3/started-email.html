@@ -1,0 +1,56 @@
+{% extends "layout_email.html" %}
+{% set serviceName = data['apply-service-name'] %}
+{% block pageTitle %}
+  DWP - Jobseeker&rsquo;s Allowance
+{% endblock %}
+
+{% set emailSubject = 'Your application for New Style Jobseeker’s Allowance' %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>Dear ((first name))</p>
+        
+        <p>We’ve started to process your New Style JSA application. If we have any questions about the details you’ve provided, we’ll let you know.</p>
+        <p>We’re getting a high number of applications due to coronavirus. We’re working hard to process your 
+        application as soon as we can, and we’ll usually contact you within 7 days to let you know if you can get New Style JSA.</p>
+
+        <h2 class="govuk-heading-m">If you’re eligible</h2>
+
+        <p>If you can get New Style JSA, we’ll contact you about an appointment to agree what you need to do to look for work. 
+        This is called a ‘Claimant Commitment’ appointment and will normally be over the phone with a work coach from your local jobcentre.</p>
+
+        <p>When we call you, our phone number may show as unknown or start with 0800. When you answer, you’ll be 
+        able to ask questions to check the call is genuine.</p>
+
+        <p>We’ll aim to pay you within 7 days of your appointment.</p>
+        
+        <h2 class="govuk-heading-m">If you’re not eligible</h2>
+
+        <p>If you cannot get New Style JSA, we’ll send you a letter to explain why.</p>
+
+        <h2 class="govuk-heading-m">Do you need help with housing costs or support for a partner or child?</h2>
+
+        <p>If you’re on a low income you might be able to apply for Universal Credit as part of a dual claim with New Style JSA.</p>
+        <p>Unlike New Style JSA, you can apply with a partner and get support for housing costs, children and childcare.</p>
+        <p>You or your partner must have less than £16,000 in savings or investments to be eligible.</p>
+        <p>Find out <a href="https://www.gov.uk/how-to-claim-universal-credit">how to claim Universal Credit on GOV.UK</a>.</p>
+
+        <h2 class="govuk-heading-m">Next steps</h2>
+
+        <p>While we process your application, you should:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>make a record of the jobsites you’ve registered on</li>
+          <li>make sure you’ve uploaded your latest CV to jobsites</li>
+          <li><a href="https://www.gov.uk/jobseekers-allowance/report-a-change-of-circumstances">let us know if your circumstances change</a>, for example if you get a job</li>
+        </ul>
+        
+        <p><a href="#">Tell us about your experience of New Style JSA.</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
